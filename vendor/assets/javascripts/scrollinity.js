@@ -16,7 +16,8 @@ $(document).ready(function(){
     });
 
     function load_new_items(){
-      $.get(load_path + '&page=' + (++page_num), function(data, e) {
+      sign = load_path.indexOf('?') >= 0 ? '&' : '?'
+      $.get(load_path + sign + 'page=' + (++page_num), function(data, e) {
         if(data.length < 5) {
           page_num = 0;
           return false;
