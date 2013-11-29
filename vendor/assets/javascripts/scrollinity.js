@@ -3,7 +3,7 @@ $(document).ready(function(){
     var page_num = 1
     load_path = $('*[data-scrollinity-path]').data('scrollinity-path');
     loading_pic = $('*[data-scrollinity-loading-pic]');
-    data_container = $('*[data-scrollinity-data-container]');
+    data_container = $('#' + $('*[data-scrollinity-data-container]').data('scrollinity-data-container'));
     bottom_px_limit = $('*[data-scrollinity-bottom-px-limit]').data('scrollinity-bottom-px-limit');
 
     $(window).on('scroll', function(){
