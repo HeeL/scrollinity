@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+  'use strict';
+
   function load_new_items(){
     var sign = load_path.indexOf('?') >= 0 ? '&' : '?'
     $.get(load_path + sign + 'page=' + (++page_num), function(data, e) {
