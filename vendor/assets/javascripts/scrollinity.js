@@ -30,7 +30,7 @@ $(document).ready(function(){
     var data_container  = $('#' + $('*[data-scrollinity-data-container]').data('scrollinity-data-container'));
     var bottom_px_limit = $('*[data-scrollinity-bottom-px-limit]').data('scrollinity-bottom-px-limit');
 
-    $(window).on('scroll', function(){
+    $(window).on('scroll.scrollinity', function(){
       if(loading_hidden() && near_bottom()) {
         if(page_num > 0) {
           loading_pic.show();
@@ -39,4 +39,8 @@ $(document).ready(function(){
       }
     });
   }
+  else {
+    $(window).off('scroll.scrollinity');
+  }
+
 });
