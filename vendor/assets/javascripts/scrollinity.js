@@ -10,7 +10,7 @@ $(document).ready(function(){
         return false;
       }
       data_container.append(data);
-    }).complete(function() {
+    }).always(function() {
       loading_pic.hide();
     });
   }
